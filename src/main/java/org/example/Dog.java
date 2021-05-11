@@ -1,7 +1,8 @@
 package org.example;
 
-public class Dog {
-    void say(){
+public class Dog implements Pet{
+    @Override
+    public void say(){
         System.out.println("bow wow");
     }
 }
