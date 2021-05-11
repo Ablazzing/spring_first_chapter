@@ -3,7 +3,11 @@ package org.example;
 public class Person {
     private Pet pet;
 
-    public Person(Pet pet) {
+    public Person() {
+
+    }
+
+    public void setPet(Pet pet) {
         this.pet = pet;
     }
 
