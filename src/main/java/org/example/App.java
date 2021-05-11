@@ -11,9 +11,11 @@ public class App
     public static void main( String[] args )
     {
         ClassPathXmlApplicationContext context =  new ClassPathXmlApplicationContext("applicationContext.xml");
-        Person person = context.getBean("myPerson",Person.class);
-        person.callPet();
-        System.out.println("My name is " +person.getName());
+        Pet pet1 = context.getBean("myPet",Dog.class);
+        Pet pet2 = context.getBean("myPet",Dog.class);
+        System.out.println(pet1);
+        System.out.println(pet2);
+        System.out.println("равны ли объекты?\n"+ (pet1==pet2));
         context.close();
     }
 }
